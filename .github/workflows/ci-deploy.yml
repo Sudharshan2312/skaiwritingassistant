@@ -1,5 +1,11 @@
 name: CI and Deploy
 
+# GitHub Actions is deprecating Node.js 20 for JavaScript-based actions.
+# This opts the runner into Node.js 24 for those actions (checkout/setup-node),
+# while keeping our project runtime pinned separately (see Setup Node step).
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches: ["main"]
