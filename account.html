@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SK-WRITLY | Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="app-header">
+      <a class="logo" href="index.html"><span>SK</span><strong>SK-WRITLY</strong></a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="generate.html">Generate</a>
+        <a href="account.html" class="active">Account</a>
+        <a href="history.html">History</a>
+      </nav>
+      <div data-health class="health-chip">Checking backend...</div>
+    </header>
+
+    <main class="page-wrap">
+      <section class="panel account-grid">
+        <article>
+          <h1>Account Access</h1>
+          <p class="muted">Register and login to enable secure history sync.</p>
+          <label for="nameInput">Name</label>
+          <input id="nameInput" class="input" placeholder="Your name" />
+          <label for="emailInput">Email</label>
+          <input id="emailInput" class="input" placeholder="you@example.com" />
+          <label for="passwordInput">Password</label>
+          <input id="passwordInput" type="password" class="input" placeholder="Minimum 6 characters" />
+          <div class="action-row wrap">
+            <button id="registerBtn" class="btn btn-soft">Register</button>
+            <button id="loginBtn" class="btn btn-primary">Login</button>
+            <button id="logoutBtn" class="btn btn-ghost">Logout</button>
+          </div>
+        </article>
+
+        <article>
+          <h2>Verification and Reset</h2>
+          <p class="muted">Use these controls when email verification or reset is required.</p>
+          <label for="codeInput">Verification or Reset Code</label>
+          <input id="codeInput" class="input" placeholder="6-digit code" />
+          <label for="newPasswordInput">New Password</label>
+          <input id="newPasswordInput" type="password" class="input" placeholder="Set new password" />
+          <div class="action-row wrap">
+            <button id="sendVerifyBtn" class="btn btn-soft">Send Verify Code</button>
+            <button id="verifyBtn" class="btn btn-soft">Verify Email</button>
+            <button id="forgotBtn" class="btn btn-soft">Forgot Password</button>
+            <button id="resetBtn" class="btn btn-soft">Reset Password</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>Account Status</h2>
+        <p id="accountStatus" class="status-text">Not authenticated</p>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>SK-WRITLY - Account Module</p>
+      <p id="footerYear"></p>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="account.js"></script>
+  </body>
+</html>

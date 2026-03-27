@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SK-WRITLY | History</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="app-header">
+      <a class="logo" href="index.html"><span>SK</span><strong>SK-WRITLY</strong></a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="generate.html">Generate</a>
+        <a href="account.html">Account</a>
+        <a href="history.html" class="active">History</a>
+      </nav>
+      <div data-health class="health-chip">Checking backend...</div>
+    </header>
+
+    <main class="page-wrap">
+      <section class="panel">
+        <div class="title-row">
+          <h1>Prompt History</h1>
+          <button id="refreshHistoryBtn" class="btn btn-soft">Refresh</button>
+        </div>
+        <p id="historyStatus" class="status-text">Login first in Account module to load history.</p>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>SK-WRITLY - History Module</p>
+      <p id="footerYear"></p>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="history.js"></script>
+  </body>
+</html>
